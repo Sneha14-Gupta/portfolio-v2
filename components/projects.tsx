@@ -1,27 +1,32 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Card, CardContent, CardDescription, CardFooter } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { Github, ExternalLink } from 'lucide-react'
-import Image from "next/image"
+import { motion } from "framer-motion";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Github, ExternalLink } from "lucide-react";
+import Image from "next/image";
 
 interface Project {
-  title: string
-  description: string
-  image: string
-  techStack: string[]
-  liveLink: string
-  githubLink: string
-  features: string[]
+  title: string;
+  description: string;
+  image: string;
+  techStack: string[];
+  liveLink: string;
+  githubLink: string;
+  features: string[];
 }
 
 const projects: Project[] = [
   {
     title: "Noughts and Crosses",
     description: "A classic game of Tic-Tac-Toe with a modern twist.",
-    image: "/images/noughts-and-crosses.jpg",
+    image: "https://placehold.co/1200x600",
     techStack: ["React", "TypeScript", "CSS"],
     liveLink: "https://noughts-and-crosses.example.com",
     githubLink: "https://github.com/yourusername/noughts-and-crosses",
@@ -30,28 +35,31 @@ const projects: Project[] = [
       "AI opponent option",
       "Game history tracking",
       "Responsive design",
-      "Customizable player names"
-    ]
+      "Customizable player names",
+    ],
   },
   {
     title: "Rock Paper Scissors Lizard Spock",
-    description: "An extended version of the classic game, as seen in 'The Big Bang Theory'.",
-    image: "/images/rock-paper-scissors-lizard-spock.jpg",
+    description:
+      "An extended version of the classic game, as seen in 'The Big Bang Theory'.",
+    image: "https://placehold.co/1200x600",
     techStack: ["JavaScript", "HTML", "CSS"],
     liveLink: "https://rpsls.example.com",
-    githubLink: "https://github.com/yourusername/rock-paper-scissors-lizard-spock",
+    githubLink:
+      "https://github.com/yourusername/rock-paper-scissors-lizard-spock",
     features: [
       "Single-player vs Computer",
       "Animated hand gestures",
       "Score tracking",
       "Game rules explanation",
-      "Sound effects"
-    ]
+      "Sound effects",
+    ],
   },
   {
     title: "Untitled UI",
-    description: "A comprehensive UI kit and design system for rapid prototyping.",
-    image: "/images/untitled-ui.jpg",
+    description:
+      "A comprehensive UI kit and design system for rapid prototyping.",
+    image: "https://placehold.co/1200x600",
     techStack: ["React", "Styled Components", "Storybook"],
     liveLink: "https://untitled-ui.example.com",
     githubLink: "https://github.com/yourusername/untitled-ui",
@@ -60,13 +68,13 @@ const projects: Project[] = [
       "Dark mode support",
       "Customizable theme",
       "Accessibility compliant",
-      "Comprehensive documentation"
-    ]
+      "Comprehensive documentation",
+    ],
   },
   {
     title: "Password Generator",
     description: "A secure password generator with customizable options.",
-    image: "/images/password-generator.jpg",
+    image: "https://placehold.co/1200x600",
     techStack: ["JavaScript", "HTML", "CSS"],
     liveLink: "https://password-gen.example.com",
     githubLink: "https://github.com/yourusername/password-generator",
@@ -75,13 +83,14 @@ const projects: Project[] = [
       "Character type selection",
       "Password strength indicator",
       "Copy to clipboard functionality",
-      "Responsive design"
-    ]
+      "Responsive design",
+    ],
   },
   {
     title: "Todomatic",
-    description: "A feature-rich todo application with task management capabilities.",
-    image: "/images/todo-app.jpg",
+    description:
+      "A feature-rich todo application with task management capabilities.",
+    image: "https://placehold.co/1200x600",
     techStack: ["React", "TypeScript", "Tailwind CSS"],
     liveLink: "https://todomatic.example.com",
     githubLink: "https://github.com/yourusername/todomatic",
@@ -90,13 +99,14 @@ const projects: Project[] = [
       "Task status tracking",
       "Priority setting",
       "Due date management",
-      "Responsive design"
-    ]
+      "Responsive design",
+    ],
   },
   {
     title: "Pokedex",
-    description: "A comprehensive Pokedex application showcasing detailed information about Pokemon.",
-    image: "/images/pokedex-app.jpg",
+    description:
+      "A comprehensive Pokedex application showcasing detailed information about Pokemon.",
+    image: "https://placehold.co/1200x600",
     techStack: ["Next.js", "TypeScript", "PokeAPI"],
     liveLink: "https://pokedex.example.com",
     githubLink: "https://github.com/yourusername/pokedex",
@@ -105,15 +115,15 @@ const projects: Project[] = [
       "Detailed Pokemon information",
       "Type-based filtering",
       "Evolution chain visualization",
-      "Responsive grid layout"
-    ]
-  }
-]
+      "Responsive grid layout",
+    ],
+  },
+];
 
 export function Projects() {
   return (
     <section id="projects" className="py-20 container mx-auto px-4">
-      <motion.h2 
+      <motion.h2
         className="text-3xl font-bold mb-8 text-center text-sage dark:text-sage-dark"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -131,25 +141,35 @@ export function Projects() {
           >
             <Card className="h-full flex flex-col overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl dark:bg-gray-800 dark:border-gray-700">
               <div className="relative h-48 w-full">
-                <Image 
-                  src={project.image} 
-                  alt={project.title} 
+                <Image
+                  src={project.image}
+                  alt={project.title}
                   layout="fill"
                   objectFit="cover"
                   className="rounded-t-lg"
                 />
               </div>
               <CardContent className="flex-grow p-6">
-                <h3 className="text-xl font-semibold mb-2 text-sage dark:text-sage-dark">{project.title}</h3>
-                <CardDescription className="text-lightpink dark:text-lightpink-dark mb-2">{project.description}</CardDescription>
+                <h3 className="text-xl font-semibold mb-2 text-sage dark:text-sage-dark">
+                  {project.title}
+                </h3>
+                <CardDescription className="text-lightpink dark:text-lightpink-dark mb-2">
+                  {project.description}
+                </CardDescription>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.techStack.map((tech) => (
-                    <Badge key={tech} variant="secondary" className="bg-lighterpink dark:bg-lighterpink-dark text-sage dark:text-sage-dark">
+                    <Badge
+                      key={tech}
+                      variant="secondary"
+                      className="bg-lighterpink dark:bg-lighterpink-dark text-sage dark:text-sage-dark"
+                    >
                       {tech}
                     </Badge>
                   ))}
                 </div>
-                <h4 className="font-semibold text-sage dark:text-sage-dark mb-2">Key Features:</h4>
+                <h4 className="font-semibold text-sage dark:text-sage-dark mb-2">
+                  Key Features:
+                </h4>
                 <ul className="list-disc list-inside text-sm text-sage dark:text-sage-dark">
                   {project.features.map((feature, index) => (
                     <li key={index}>{feature}</li>
@@ -157,13 +177,31 @@ export function Projects() {
                 </ul>
               </CardContent>
               <CardFooter className="flex justify-between p-4 bg-lighterpink bg-opacity-30 dark:bg-gray-700 dark:bg-opacity-50">
-                <Button asChild variant="outline" size="sm" className="bg-sage text-offwhite hover:bg-lightpink dark:bg-sage-dark dark:text-gray-900 dark:hover:bg-lightpink-dark">
-                  <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
+                <Button
+                  asChild
+                  variant="outline"
+                  size="sm"
+                  className="bg-sage text-offwhite hover:bg-lightpink dark:bg-sage-dark dark:text-gray-900 dark:hover:bg-lightpink-dark"
+                >
+                  <a
+                    href={project.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Github className="mr-2 h-4 w-4" /> Code
                   </a>
                 </Button>
-                <Button asChild variant="outline" size="sm" className="bg-sage text-offwhite hover:bg-lightpink dark:bg-sage-dark dark:text-gray-900 dark:hover:bg-lightpink-dark">
-                  <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
+                <Button
+                  asChild
+                  variant="outline"
+                  size="sm"
+                  className="bg-sage text-offwhite hover:bg-lightpink dark:bg-sage-dark dark:text-gray-900 dark:hover:bg-lightpink-dark"
+                >
+                  <a
+                    href={project.liveLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <ExternalLink className="mr-2 h-4 w-4" /> Live Demo
                   </a>
                 </Button>
@@ -173,6 +211,5 @@ export function Projects() {
         ))}
       </div>
     </section>
-  )
+  );
 }
-

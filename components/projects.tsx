@@ -26,7 +26,7 @@ const projects: Project[] = [
   {
     title: "Noughts and Crosses",
     description: "A classic game of Tic-Tac-Toe with a modern twist.",
-    image: "https://placehold.co/1200x600",
+    image: "/images/placeholder.jpeg",
     techStack: ["React", "TypeScript", "CSS"],
     liveLink: "https://noughts-and-crosses.example.com",
     githubLink: "https://github.com/yourusername/noughts-and-crosses",
@@ -42,7 +42,7 @@ const projects: Project[] = [
     title: "Rock Paper Scissors Lizard Spock",
     description:
       "An extended version of the classic game, as seen in 'The Big Bang Theory'.",
-    image: "https://placehold.co/1200x600",
+    image: "/images/placeholder.jpeg",
     techStack: ["JavaScript", "HTML", "CSS"],
     liveLink: "https://rpsls.example.com",
     githubLink:
@@ -59,7 +59,7 @@ const projects: Project[] = [
     title: "Untitled UI",
     description:
       "A comprehensive UI kit and design system for rapid prototyping.",
-    image: "https://placehold.co/1200x600",
+    image: "/images/placeholder.jpeg",
     techStack: ["React", "Styled Components", "Storybook"],
     liveLink: "https://untitled-ui.example.com",
     githubLink: "https://github.com/yourusername/untitled-ui",
@@ -74,7 +74,7 @@ const projects: Project[] = [
   {
     title: "Password Generator",
     description: "A secure password generator with customizable options.",
-    image: "https://placehold.co/1200x600",
+    image: "/images/placeholder.jpeg",
     techStack: ["JavaScript", "HTML", "CSS"],
     liveLink: "https://password-gen.example.com",
     githubLink: "https://github.com/yourusername/password-generator",
@@ -90,7 +90,7 @@ const projects: Project[] = [
     title: "Todomatic",
     description:
       "A feature-rich todo application with task management capabilities.",
-    image: "https://placehold.co/1200x600",
+    image: "/images/placeholder.jpeg",
     techStack: ["React", "TypeScript", "Tailwind CSS"],
     liveLink: "https://todomatic.example.com",
     githubLink: "https://github.com/yourusername/todomatic",
@@ -106,7 +106,7 @@ const projects: Project[] = [
     title: "Pokedex",
     description:
       "A comprehensive Pokedex application showcasing detailed information about Pokemon.",
-    image: "https://placehold.co/1200x600",
+    image: "/images/placeholder.jpeg",
     techStack: ["Next.js", "TypeScript", "PokeAPI"],
     liveLink: "https://pokedex.example.com",
     githubLink: "https://github.com/yourusername/pokedex",
